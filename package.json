@@ -1,0 +1,32 @@
+{
+  "name": "kurs-next-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config .graphqlrc.ts",
+    "postinstall": "pnpm codegen",
+    "dev": "tsx watch src/server.ts",
+    "seed": "tsx prisma/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eddeee888/gcg-typescript-resolver-files": "^0.7.2",
+    "@faker-js/faker": "^8.4.1",
+    "@graphql-codegen/cli": "^5.0.2",
+    "graphql": "^16.8.1",
+    "prettier": "^3.2.5",
+    "prisma": "^5.9.1",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "@prisma/client": "^5.9.1",
+    "graphql-scalars": "^1.22.4"
+  },
+  "type": "module"
+}
