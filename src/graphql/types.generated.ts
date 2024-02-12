@@ -43,6 +43,7 @@ export type Product = {
 export type Query = {
   __typename?: "Query";
   product?: Maybe<Product>;
+  productsList?: Maybe<Array<Maybe<Product>>>;
 };
 
 export type QueryproductArgs = {
@@ -197,6 +198,11 @@ export type QueryResolvers<
     ParentType,
     ContextType,
     RequireFields<QueryproductArgs, "id">
+  >;
+  productsList?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes["Product"]>>>,
+    ParentType,
+    ContextType
   >;
 };
 
