@@ -3,7 +3,7 @@ import { prisma } from "../../../../db.js";
 export const productsList: NonNullable<QueryResolvers["productsList"]> = async (
   _parent,
   _arg,
-  _ctx
+  _ctx,
 ) => {
   const product = await prisma.product.findMany();
   return product;

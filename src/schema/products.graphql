@@ -9,4 +9,5 @@ type Product {
   slug: String!
   description: String!
   price: Int!
+  image: String!
 }
